@@ -24,6 +24,7 @@ for i in range(Tamanho_pacote):
    Pacote_DL[i] = 0
    PacoteUL[i] = 0
 
+# ================== 3 - Arquivos criados para o Nível 4 Armazenamento
 # Arquivos temporários que são apagados a cada início de rodadas de medidas
 # Esses arquivos são utilizados para exibir os dados brutos em tempo real
 
@@ -78,18 +79,11 @@ ser.reset_input_buffer()
 ser.reset_output_buffer()
 
 # =============== Camada de aplicação DL
-
 Comando_LED_amarelo = 0  # Inicia apagado
-
-
 # ================ Camada de Transporte DL
-
 Contador_pkt_DL = 0
-
 perda_PK_RX = 0
-
 # ================ Camada de Rede DL
-
 Grava = 0
 #ID_sensor = input("Identificação do sensor = ")
 ID_sensor = 1
@@ -116,34 +110,23 @@ try:
       try:
 
       # ======== Camada de aplicação PACOTE DL
-
       # Lê o arquivo cmd_led_amarelo.txt
-
          with open("cmd_led_amarelo.txt", "r") as f:
-
             linha = f.readline()
-
             # Remove espaços e ENTER
             linha = linha.strip()
-
             # Se o valor for 0 ou 1
             if linha == "0":
                Comando_LED_amarelo = 0
-
             elif linha == "1":
                Comando_LED_amarelo = 1
-
             else:
                # Qualquer outro conteúdo assume 0
                Comando_LED_amarelo = 0
-
       except:
-
          # Se houver qualquer erro assume 0
          Comando_LED_amarelo = 0
-
       # Coloca o comando no byte 16 do DL
-
       Pacote_DL[16] = Comando_LED_amarelo
 
       # ======== Camada de transporte DL
