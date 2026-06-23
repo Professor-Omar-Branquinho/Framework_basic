@@ -128,6 +128,12 @@ try:
          )
          SNR_DL = Pacote_UL[1]
          SNR_UL = Pacote_UL[3]
+         # ======== Camada MAC UL
+
+
+         # ======== Camada NET UL
+
+         
          # ======== Camada de aplicação
          # Luminosidade
          luminosidade = (Pacote_UL[18]*256 + Pacote_UL[19])
