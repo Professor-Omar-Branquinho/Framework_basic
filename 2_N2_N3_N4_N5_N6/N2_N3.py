@@ -21,10 +21,10 @@ for i in range(Tamanho_pacote):
 # Arquivos temporários que são apagados a cada início de rodadas de medidas
 # Esses arquivos são utilizados para exibir os dados brutos em tempo real
 # Apaga arquivos temporários da luminosidade e RSSI da rodada passada
-if os.path.exists(".N4_medidas_rssi_Visualização.txt"):
-   os.remove(".N4_medidas_rssi_Visualização.txt")
-if os.path.exists(".N4_medida_luminosidade_Visualização.txt"):
-   os.remove(".N4_media_luminosidade_Visualização.txt")
+if os.path.exists("N4_medidas_rssi_Visualização.txt"):
+   os.remove("N4_medidas_rssi_Visualização.txt")
+if os.path.exists("N4_medida_luminosidade_Visualização.txt"):
+   os.remove("N4_media_luminosidade_Visualização.txt")
 # Para gravar arquivo de Log.
 #Grava_log = input('0 para não gravar e 1 para gravar = ')
 Grava_log = 1
@@ -37,8 +37,8 @@ if Grava_log == 1:
    Cabecalho = 'Time stamp,Contador,DL_B0,DL_B1,DL_B2,DL_B3,DL_B4,DL_B5,DL_B6,DL_B7,DL_B8,DL_B9,DL_B10,DL_B11,DL_B12,DL_B13,DL_B14,DL_B15,DL_B16,DL_B17,DL_B18,DL_B19,UL_B0,UL_B1,UL_B2,UL_B3,UL_B4,UL_B5,UL_B6,UL_B7,UL_B8,UL_B9,UL_B10,UL_B11,UL_B12,UL_B13,UL_B14,UL_B15,UL_B16,UL_B17,UL_B18,UL_B19'
    print(Cabecalho,file=Log_dados)
 # Arquivos temporários para exibir gráficos
-filename2 = ".N4_medidas_rssi_Visualização.txt"
-filename3 = ".N4_medida_luminosidade_Visualização.txt"
+filename2 = "N4_medidas_rssi_Visualização.txt"
+filename3 = "N4_medida_luminosidade_Visualização.txt"
 # ============= INICIALIZAÇÃO
 # Abre a porta serial
 # Configura a serial
@@ -79,7 +79,7 @@ try:
 
       # ======== Camada de aplicação PACOTE DL
       # Lê o arquivo cmd_led_amarelo.txt
-         with open("cmd_led_amarelo.txt", "r") as f:
+         with open("N4_cmd_led_amarelo.txt", "r") as f:
             linha = f.readline()
             # Remove espaços e ENTER
             linha = linha.strip()

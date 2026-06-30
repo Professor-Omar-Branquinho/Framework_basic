@@ -3,8 +3,8 @@
 #Calcula a média da luminosidade
 import time
 import os
-arquivo_entrada = ".N4_medida_luminosidade_Visualização.txt"
-arquivo_saida = ".N4_media_luminosidade_Visualização.txt"
+arquivo_entrada = "N4_medida_luminosidade_Visualização.txt"
+arquivo_saida = "N4_media_luminosidade_Visualização.txt"
 # Aguarda o arquivo ser criado
 while not os.path.exists(arquivo_entrada):
     print("Aguardando criação do arquivo .N4_medida_luminosidade_Visualização.txt...")

@@ -15,7 +15,7 @@ def atualizar_grafico(ax1, ax2, canvas, raiz):
     rssi_up = []
     # ===================== LUMINOSIDADE =====================
     try:
-        with open("medidas_luminosidade.txt", 'r') as f:
+        with open("N4_medida_luminosidade_Visualização.txt", 'r') as f:
             for linha in f:
                 linha = linha.strip()
                 if linha:
@@ -27,7 +27,7 @@ def atualizar_grafico(ax1, ax2, canvas, raiz):
         pass
     # ===================== MÉDIA DA LUMINOSIDADE =====================
     try:
-        with open("media_luminosidade.txt", 'r') as f:
+        with open("N4_media_luminosidade_Visualização.txt", 'r') as f:
             for linha in f:
                 linha = linha.strip()
                 if linha:
@@ -51,7 +51,7 @@ def atualizar_grafico(ax1, ax2, canvas, raiz):
             valores_media = valores_lum.copy()
     # ===================== RSSI =====================
     try:
-        with open("medidas_rssi.txt", 'r') as f:
+        with open("N4_medidas_rssi_Visualização.txt", 'r') as f:
             for linha in f:
                 linha = linha.strip()
                 if linha:
