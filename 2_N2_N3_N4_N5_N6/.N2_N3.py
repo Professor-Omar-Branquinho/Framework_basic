@@ -23,7 +23,7 @@ for i in range(Tamanho_pacote):
 # Apaga arquivos temporários da luminosidade e RSSI da rodada passada
 if os.path.exists(".N4_medidas_rssi_Visualização.txt"):
    os.remove(".N4_medidas_rssi_Visualização.txt")
-if os.path.exists(".N4_media_luminosidade_Visualização.txt"):
+if os.path.exists(".N4_medida_luminosidade_Visualização.txt"):
    os.remove(".N4_media_luminosidade_Visualização.txt")
 # Para gravar arquivo de Log.
 #Grava_log = input('0 para não gravar e 1 para gravar = ')
@@ -38,7 +38,7 @@ if Grava_log == 1:
    print(Cabecalho,file=Log_dados)
 # Arquivos temporários para exibir gráficos
 filename2 = ".N4_medidas_rssi_Visualização.txt"
-filename3 = ".N4_media_luminosidade_Visualização.txt"
+filename3 = ".N4_medida_luminosidade_Visualização.txt"
 # ============= INICIALIZAÇÃO
 # Abre a porta serial
 # Configura a serial
